@@ -1,0 +1,93 @@
+@use "../foundation/general" as g;
+
+.concept {
+  // border: 2px solid g.cl(bluegreen); //検証
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Zen Old Mincho', serif;
+
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  h1 {
+    letter-spacing: 0.6em;
+    margin-bottom: 100px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .yakushima-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .yakushima-item {
+    padding: 30px;
+    width: calc(100% / 3);
+    display: inline-block;
+
+    .title-jpn {
+      display: inline-block;
+      font-size: 1.4em;
+      margin-top: 10px;
+      padding: 10px 5px;
+    }
+
+    &>p {
+      text-align: left;
+      padding: 10px 5px;
+    }
+
+    /* 画像まわりのぼかし
+    ------------------- */
+    .frame {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 10px 15px g.cl(whitecream);
+      }
+
+      &>img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin: 0 auto;
+
+        &.-top {
+          object-position: 50% 15%;
+        }
+
+        &.-center {
+          object-position: center;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}

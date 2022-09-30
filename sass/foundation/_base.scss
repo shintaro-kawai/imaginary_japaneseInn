@@ -1,0 +1,68 @@
+@use "../foundation/general" as g;
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif; // 'Zen Old Mincho', serif;
+  color: g.cl(black);
+}
+
+main {
+  display: flex;
+
+  .haikei {
+    // position: relative;
+    min-height: 100%;
+    width: 100%;
+    /* ------------------------------------
+    heightに数値を指定すると後々のsectionタグが
+    はみ出てしまうので，autoを設定
+    --------------------------------------- */
+    height: auto; // 120vh
+    margin: 0;
+    background-image: url(../image/Kokemusu-Forest.jpg);
+    /*--スクロールをさせるため 高さ指定--*/
+    background-size: cover;
+    /*--背景画像のサイズ--*/
+    background-attachment: fixed;
+    /*--背景画像の固定--*/
+    background-repeat: no-repeat;
+    /*--背景画像の繰り返し--*/
+    background-position: center center;
+    /*--背景画像の位置--*/
+    z-index: 2;
+    padding: 0; // 5em 0;
+
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   filter: grayscale(90%) contrast(100%);
+    //   background: inherit;
+    //   z-index: -1;
+    // }
+
+    /* スクロールに合わせて背景が透過するために設定 */
+    .toumei {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(g.cl(white), 0);
+      z-index: 3;
+    }
+  }
+}
+
+a {
+  color: g.cl(black);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-left: 0;
+}

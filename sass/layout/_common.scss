@@ -1,0 +1,65 @@
+@use "../foundation/general" as g;
+
+/* "cmn": common 
+=======================*/
+
+.cmn-section {
+  padding-top: 40px;
+  background-color: transparent;
+
+  &.-white {
+    background-color: g.cl(white);
+  }
+
+  &.-black {
+    background-color: g.cl(black);
+  }
+}
+
+.cmn-title {
+  text-align: center;
+  color: g.cl(black);
+  text-transform: uppercase; // 全て大文字
+
+  &.-info {
+    font-size: 24px;
+  }
+
+  .main {
+    display: block;
+    font-size: 32px;
+  }
+
+  .sub {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    @include g.sansSerif; // font-familyの指定
+    text-transform: capitalize; // 最初の文字は大文字
+    margin-top: 34px;
+
+    @include g.overTab {
+      margin-top: 50px;
+    }
+
+    &.-faq {
+      text-transform: uppercase; // 全て大文字
+    }
+
+  }
+}
+
+/* "〇〇の詳細"ボタン
+============================== */
+.cmn-btn {
+
+  a,
+  input {
+    display: inline-block;
+    padding: 12px 36px;
+    background-color: g.cl(gold);
+    color: g.cl(white);
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}

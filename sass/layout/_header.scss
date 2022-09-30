@@ -1,0 +1,176 @@
+@use "../foundation/general" as g;
+
+.header {
+  background-color: transparent; // g.cl(greengrey);
+  width: 100%;
+  height: 70px; //
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .header__inner {
+    padding: 0 20px;
+    display: flex; // ロゴとハンバーガーメニューを横に並べる
+    align-items: center;
+    justify-content: space-between;
+    height: inherit; // 親要素の高さを継承
+    position: relative;
+  }
+
+  .header__title {
+    width: 80px;
+
+    @include g.overTab {
+      width: 120px;
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  .header__nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: g.cl(greengrey);
+    transition: ease .4s;
+
+    @include g.overTab {
+      /* ---------------------------------------
+      ヘッダーロゴ無しで.header__navを中央寄せする時は
+      display:absolute; と margin: 0 auto;
+      ------------------------------------ */
+      position: absolute; // static
+      margin: 0 auto;
+      transform: initial;
+      background-color: inherit;
+      height: inherit;
+      display: flex;
+      justify-content: center; // end
+      width: 90%; // 50%
+      padding-top: 5px; // 
+      border: 2px solid g.cl(inspect-line); // 検証
+    }
+
+    /* ハンバーガーメニュークリック後のスタイル */
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .header__hamburger {
+    width: 48px;
+    height: 100%;
+
+    /* ハンバーガーメニュー */
+    &.hamburger {
+      background-color: transparent;
+      border-color: transparent;
+      z-index: 999;
+
+      @include g.overTab {
+        display: none;
+      }
+    }
+  }
+
+  .hamburger {
+    &>span {
+      width: 100%;
+      height: 1px;
+      background-color: g.cl(dull-black);
+      position: relative;
+      transition: ease .4s;
+      display: block;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        margin: 8px 0;
+      }
+
+      &:nth-child(3) {
+        top: 0;
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          top: 5px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: -13px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  /* PCサイズではナビゲーションメニューを横並び */
+  @include g.overTab {
+    .nav__items {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap; // 左から横並び,折り返し無し
+      align-items: center; // 中央配置
+      justify-content: space-around; // 両端以外は要素間に余白を均等配置
+      column-gap: 15px; // 列間の余白
+    }
+  }
+
+  .nav-items {
+    padding-top: 250px;
+    padding-bottom: 200px;
+
+    @include g.overTab {
+      padding-top: inherit;
+      padding-bottom: inherit;
+    }
+  }
+
+  #test {
+    font-weight: 700;
+    // color: g.cl(inspect-line);
+  }
+
+  /* ナビのリンク */
+  .nav-items__item {
+    a {
+      color: g.cl(whitecream);
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 20px; //20
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 24px;
+
+      @include g.overTab {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

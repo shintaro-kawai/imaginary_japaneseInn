@@ -1,0 +1,62 @@
+@use "../foundation/general" as g;
+
+.room {
+  border: 2px solid g.cl(bluegreen); //検証
+  width: 80%;
+  margin: 0 auto;
+
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .rooms {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .room-img {
+    width: calc((100% / 2) - 10px);
+    height: auto;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 0;
+      padding-top: 60%;
+    }
+
+    &>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      // vertical-align: middle; // imgの下の余白を消す
+    }
+
+    &>p {
+      display: inline-block;
+      white-space: nowrap; // 文字列の折り返し無
+      position: absolute;
+      top: 90%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      margin: 0;
+      font-size: 30px;
+      color: g.cl(white);
+    }
+  }
+
+}

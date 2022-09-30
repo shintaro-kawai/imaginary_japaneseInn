@@ -1,0 +1,56 @@
+@use "../foundation/general" as g;
+
+.footer {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  background-color: transparent;
+  border-top: 2px groove g.cl(border-bottom);
+
+  // 黒ポチを消す
+  .nav-wrap {
+    ul {
+      list-style-type: none;
+      padding-left: 0%;
+    }
+  }
+
+  .nav-list {
+    text-align: center;
+
+    @include g.overTab {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .nav-item {
+    +.nav-item {
+      margin-top: 20px;
+
+      @include g.overTab {
+        margin-left: 35px;
+        margin-top: 0;
+      }
+    }
+
+    a {
+      font-size: 16px;
+      color: g.cl(black);
+    }
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+
+  .copyright {
+    padding-top: 20px;
+    color: g.cl(black);
+    font-size: 16px;
+    text-align: center;
+  }
+}

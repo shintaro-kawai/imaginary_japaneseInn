@@ -1,0 +1,79 @@
+@use "../foundation/general" as g;
+
+.top {
+  border: 2px solid g.cl(bluegreen);
+  width: 80%;
+  margin: 0 auto;
+
+  /* スタート時は透明 
+  ------------------ */
+  .box {
+    opacity: 0;
+  }
+
+  /* ふわっとした動きを与えるクラス
+  -----------------------------  */
+  .fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .top-list {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .top-item {
+    // border: 1px solid g.cl(black); // inspection
+    font-size: 60px;
+    color: g.cl(black);
+    text-align: center;
+    letter-spacing: 0.5em;
+
+    &.-plus {
+      font-size: 90px;
+    }
+  }
+
+  .top-logo {
+    width: 100%;
+    margin: 100px auto 150px;
+
+    img {
+      display: block;
+      width: 100px;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    .arrow-down {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      border: 5px solid;
+      border-color: transparent transparent g.cl(arrow) g.cl(arrow);
+      transform: rotate(-45deg);
+    }
+  }
+}

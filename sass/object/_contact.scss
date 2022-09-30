@@ -1,0 +1,76 @@
+@use "../foundation/general" as g;
+
+.contact {
+  width: 80%;
+  margin: 0 auto;
+
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  form {
+    width: fit-content; // 400px
+    margin: 30px auto 50px;
+  }
+
+  .form-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .label {
+    float: left;
+    margin-right: 20px;
+    width: 135px;
+    border-left: solid 3px g.cl(matcha);
+    padding-left: 10px;
+  }
+
+  .inputs {
+    float: left;
+    width: 300px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"] {
+    border: solid 1px g.cl(border-input);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  textarea {
+    border: solid 1px g.cl(border-input);
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    font-size: 15px;
+  }
+
+  .btn-area {
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    background: g.cl(bluegreen);
+    border: none;
+    color: g.cl(white);
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+
+  input[type="reset"] {
+    background: g.cl(border-input);
+    border: none;
+    color: g.cl(white);
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+}
