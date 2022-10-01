@@ -1,7 +1,6 @@
 @use "../foundation/general" as g;
 
 .top {
-  border: 2px solid g.cl(bluegreen);
   width: 80%;
   margin: 0 auto;
 
@@ -36,7 +35,6 @@
     display: grid;
     width: 100%;
     height: 500px;
-    // border: 1px solid g.cl(red); //inspect
     margin: 60px auto 10px;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr;

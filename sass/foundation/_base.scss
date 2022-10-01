@@ -33,14 +33,6 @@ main {
     z-index: 2;
     padding: 0; // 5em 0;
 
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   filter: grayscale(90%) contrast(100%);
-    //   background: inherit;
-    //   z-index: -1;
-    // }
-
     /* スクロールに合わせて背景が透過するために設定 */
     .toumei {
       width: 100%;

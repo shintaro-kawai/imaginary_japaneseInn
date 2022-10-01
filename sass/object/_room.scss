@@ -1,7 +1,6 @@
 @use "../foundation/general" as g;
 
 .room {
-  border: 2px solid g.cl(bluegreen); //検証
   width: 80%;
   margin: 0 auto;
 
@@ -94,7 +93,6 @@
     display: block;
     text-align: left;
     padding-left: 20px;
-    // padding-top: 5px;
   }
 
   .price-info1 {
@@ -106,7 +104,6 @@
     margin: 5px auto;
     text-align: left;
     padding-left: 30%;
-    // border: 1px solid g.cl(inspect-line);
 
     &>li {
       list-style-type: square !important;
@@ -129,7 +126,6 @@
   .pay-img {
     width: 100%;
     height: auto;
-    // border: 1px solid g.cl(border);
     margin: 0 auto;
 
     &>img {

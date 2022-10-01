@@ -51,16 +51,15 @@
       ヘッダーロゴ無しで.header__navを中央寄せする時は
       display:absolute; と margin: 0 auto;
       ------------------------------------ */
-      position: absolute; // static
+      position: absolute;
       margin: 0 auto;
       transform: initial;
       background-color: inherit;
       height: inherit;
       display: flex;
-      justify-content: center; // end
-      width: 90%; // 50%
-      padding-top: 5px; // 
-      // border: 2px solid g.cl(inspect-line); // 検証
+      justify-content: center;
+      width: 90%;
+      padding-top: 5px;
     }
 
     /* ハンバーガーメニュークリック後のスタイル */
@@ -131,10 +130,10 @@
     .nav__items {
       width: 100%;
       display: flex;
-      flex-flow: row nowrap; // 左から横並び,折り返し無し
-      align-items: center; // 中央配置
-      justify-content: space-around; // 両端以外は要素間に余白を均等配置
-      column-gap: 15px; // 列間の余白
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-around;
+      column-gap: 15px;
     }
   }
 
@@ -147,9 +146,6 @@
       padding-bottom: inherit;
     }
   }
-
-  //  <ul class="nav__items nav-items">
-  //  <li class="nav-items__item current">
 
   /* ナビのリンク */
   .nav-items__item {
@@ -219,6 +215,27 @@
           transform: scale(0, 1);
           transform-origin: left top; // 左上基点
         }
+      }
+    }
+  }
+
+  .active {
+    a {
+      color: #0481A2;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background: #0481A2;
+        transition: all .3s;
+        transform: scale(0, 1);
+        transform-origin: left top; // 左上基点
       }
     }
   }
