@@ -137,7 +137,7 @@ ham.addEventListener('click', function () {
 ================================ */
 
 // フッターで隠れないように高さ位置調整の値
-let corr_num = 170;
+let corr_num = 100 //170;
 
 $(function () {
   // #で始まるアンカーをクリックした場合に処理

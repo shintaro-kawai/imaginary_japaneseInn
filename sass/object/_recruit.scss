@@ -1,0 +1,93 @@
+@use "../foundation/general" as g;
+
+.recruit {
+  border: 2px solid g.cl(bluegreen); //
+  width: 80%;
+  margin: 0 auto;
+
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid g.cl(inspect-line); // 
+  }
+
+  .recruit-head {
+    display: block;
+    font-size: 1.5em;
+    padding: 20px 5px;
+    text-align: center;
+    // border: 1px solid g.cl(inspect-line); // 
+    margin: 20px auto;
+  }
+
+  .recruit-message {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .recruit-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .recruit-detail {
+    width: 60%;
+    height: auto;
+    padding: 20px 30px 10px 20px;
+    // background-color: rgba(g.cl(green-4), 0.4);
+  }
+
+  .requirement {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .require-list {
+    padding-left: 30px;
+    margin-top: 0;
+
+    &>li {
+      list-style-type: square !important;
+    }
+  }
+
+  .another {
+    width: 40%;
+    height: auto;
+
+    .recruit-img {
+      width: 100%;
+      height: auto;
+      padding: 1px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 10px 15px g.cl(whitecream);
+        border-radius: 8px;
+      }
+
+      &>img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 auto;
+        border-radius: 8px;
+      }
+    }
+  }
+
+
+}

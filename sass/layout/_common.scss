@@ -20,6 +20,9 @@
   text-align: center;
   color: g.cl(black);
   text-transform: uppercase; // 全て大文字
+  letter-spacing: 0.3em; // 文字の間隔
+  margin-top: 60px;
+  margin-bottom: 40px;
 
   &.-info {
     font-size: 24px;

@@ -5,9 +5,11 @@
 @use "layout/footer";
 @use "layout/header";
 
+@use "object/access";
 @use "object/concept";
 @use "object/contact";
 @use "object/facility";
 @use "object/plan";
+@use "object/recruit";
 @use "object/room";
 @use "object/top";

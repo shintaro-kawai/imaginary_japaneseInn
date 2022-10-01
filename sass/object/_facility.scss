@@ -1,7 +1,7 @@
 @use "../foundation/general" as g;
 
 .facility {
-  border: 2px solid g.cl(bluegreen);
+  border: 2px solid g.cl(bluegreen); //
   width: 80%;
   margin: 0 auto;
 
@@ -80,7 +80,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(g.cl(green-3), 0.4);
+    background-color: rgba(g.cl(green-4), 0.4);
 
     @include g.overTab {
       flex-flow: row wrap;
@@ -171,7 +171,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(g.cl(orange-3), 0.4);
+    background-color: rgba(g.cl(orange-3), 0.6);
 
     @include g.overTab {
       flex-flow: row wrap;
@@ -187,7 +187,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(g.cl(whitecream), 0.4);
+    background-color: rgba(g.cl(whitecream), 0.6);
 
     @include g.overTab {
       flex-flow: row wrap;

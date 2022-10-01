@@ -24,11 +24,11 @@
     <header class="header">
       <div class="header__inner">
         <nav class="header__nav nav" id="js-nav">
-          <ul class="nav__items nav-items">
-            <li class="nav-items__item"><a href="">HOME</a></li>
+          <ul class="nav__items nav-items gnavi">
+            <li class="nav-items__item current"><a href="">HOME</a></li>
             <li class="nav-items__item"><a href="#CONCEPT">CONCEPT</a></li>
             <li class="nav-items__item"><a href="#PLAN">WORKCATION</a></li>
-            <li class="nav-items__item"><a href="#PLAN"><span id="test">EXPERIENCE</span></a></li>
+            <li class="nav-items__item"><a href="#PLAN">EXPERIENCE</a></li>
             <li class="nav-items__item"><a href="#PLAN">PHOTO WS</a></li>
             <li class="nav-items__item"><a href="#FACILITY">FACILITY</a></li>
             <li class="nav-items__item"><a href="#ROOM">ROOM</a></li>
@@ -291,7 +291,7 @@
                 </div>
               </div>
               <div class="pay-wrapper">
-                <div class="fac-left">
+                <div class="pay-left">
                   <div class="price">
                     <div class="info-box">PRICE</div>
                     <div class="info-cont">
@@ -308,7 +308,7 @@
                         <li>3週間以上の滞在 20%OFF</li>
                         <li>1ヶ月以上の滞在 30%OFF</li>
                       </ul>
-                      <ul class="price-info1">
+                      <ul class="price-info3">
                         <li>朝食　700円</li>
                         <li>登山弁当　約500円〜</li>
                         <li>※全て税込価格</li>
@@ -316,7 +316,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="fac-right">
+                <div class="pay-right">
                   <div class="payment">
                     <div class="info-box">PAYMENT</div>
                     <div class="info-cont">
@@ -347,23 +347,30 @@
           <section class="access cmn-section">
             <div class="inner">
               <h2 class="cmn-title"><a id="ACCESS">ACCESS</a></h2>
-              <div class="google-map"></div>
-              <div class="route">
-                <ul class="route-list">
-                  <li>高速船利用（安房港）：安房港より徒歩10分</li>
-                  <li>屋久島空港からタクシーまたはバスで約15分</li>
-                  <li>宮之浦港からタクシーまたはバスで約40分</li>
-                </ul>
-                <div class="bus-stop">
-                  <span>最寄りのバス停</span>
-                  <span>「合庁前」または「安房港」</span>
-                  <span>徒歩約10~15分</span>
-                  <span>バス停間の送迎可．ご予約ください．</span>
-                </div>
-                <p>*住所検索ではたどりつけないことがあります．<br>その際は下記コードにてご検索ください．</p>
-                <div class="search">
-                  <div class="map-mark"></div>
-                  <div class="lat-lon">30.322957, 130.659414</div>
+              <div class="access-wrapper">
+                <div class="google-map"><iframe
+                    src="
+                    https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d27532.38837517752!2d130.59008911647652!3d30.392174900740276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x353ce1be8b30bd4d%3A0x8f43a9c6eb854a6e!2zS2Fnb3NoaW1hLCBZYWt1c2hpbWEsIEtvc2VkYSwgNTAxIOWxi-S5heWztuepuua4rw!3m2!1d30.3834362!2d130.6588688!4m5!1s0x353d1f58a9e681f9%3A0x6b0bd026bf424234!2sDrum%20rock%20(Taiko-iwa)%2C%20Yakushima%2C%20Kumage%20District%2C%20Kagoshima%20891-4206!3m2!1d30.3622984!2d130.5682444!5e0!3m2!1sen!2sjp!4v1664587776471!5m2!1sen!2sjp"
+                    width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="route">
+                  <span>ROUTE</span>
+                  <ul class="route-list">
+                    <li>高速船利用（安房港）：安房港より徒歩10分</li>
+                    <li>屋久島空港からタクシーまたはバスで約15分</li>
+                    <li>宮之浦港からタクシーまたはバスで約40分</li>
+                  </ul>
+                  <div class="bus-stop">
+                    <span>最寄りのバス停</span>
+                    <span>「合庁前」または「安房港」</span>
+                    <span>徒歩約10~15分</span>
+                    <span>バス停間の送迎可．ご予約ください．</span>
+                  </div>
+                  <p>*住所検索ではたどりつけないことがあります．<br>その際は下記コードにてご検索ください．</p>
+                  <div class="search">
+                    <div class="map-mark"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="lat-lon">30.322957, 130.659414</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -371,16 +378,20 @@
           <section class="recruit cmn-section">
             <div class="inner">
               <h2 class="cmn-title">RECRUIT</h2>
-              <div class="recruit-message">いっぷくでは住み込みスタッフを募集しています．</div>
+              <div class="recruit-head">
+                <span>いっぷくでは住み込みスタッフを募集しています．</span>
+              </div>
+              <div class="recruit-message">
+                <p>宿のお仕事を手伝いながら，じっくりと屋久島の暮らしや自然を体験してみませんか？<br>
+                  屋久島の暮らしに興味のある方，働きながら長期滞在したい方，人と関わることが好きな方，写真に興味ある方，<br>
+                  ぜひご連絡をお待ちしております！</p>
+              </div>
               <div class="recruit-wrapper">
                 <div class="recruit-detail">
-                  <p>宿のお仕事を手伝いながら，じっくりと屋久島の暮らしや自然を体験してみませんか？<br>
-                    屋久島の暮らしに興味のある方，働きながら長期滞在したい方，人と関わることが好きな方，写真に興味ある方，<br>
-                    ぜひご連絡をお待ちしております！</p>
                   <p>＜業務内容＞<br>施設内の清掃，ルームクリーニング，ゲスト対応，SNS広報，食事提供の補助 eyc...</p>
                   <p>＜期間＞<br>1ヶ月〜長期</p>
-                  <p>＜条件・待遇＞</p>
-                  <ul>
+                  <p class="requirement">＜条件・待遇＞</p>
+                  <ul class="require-list">
                     <li>18歳〜30代の心身ともに健康な女性</li>
                     <li>明るく元気に人と接することができる方</li>
                     <li>共同生活を楽しめる方</li>
@@ -392,9 +403,11 @@
                   </ul>
                   <p>以上をご確認の上，希望される方はZOOMまたは現地にて面接を行います．<br>
                     下記事項をご記入のうえ，問い合わせフォームまたはインスタグラムよりご連絡ください．<br>
-                    【お名前，性別，年齢，生年月日，ご住所，電話番号，Email，希望面接日時，希望する滞在期間】</p>
+                    【お名前，性別，年齢，生年月日，ご住所，電話番号，Email，<br> 希望面接日時，希望する滞在期間】</p>
                 </div>
-                <div class="recruit-img"></div>
+                <div class="another">
+                  <div class="recruit-img"><img src="image/team.jpg" alt="Recruit"></div>
+                </div>
               </div>
             </div>
           </section><!-- /.recruit -->
@@ -425,7 +438,6 @@
               </form>
             </div>
           </section><!-- contact -->
-
           <footer class="footer">
             <div class="wow animate__animated animate__fadeIn" data-wow-offset="100">
               <nav class="nav-wrap">
