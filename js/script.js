@@ -55,7 +55,7 @@ function delayScrollAnime() {
   }, elapsed_time + 500)
 }
 
-// 画面をスクロールをしたら動かしたい場合の記述
+// 画面をスクロールしたら動かしたい場合の記述
 $(window).scroll(function () {
   delayScrollAnime();
 });

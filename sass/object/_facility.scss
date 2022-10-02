@@ -16,18 +16,24 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 
     @include g.overTab {
       flex-flow: row wrap;
+      gap: 0px;
     }
   }
 
   .fac-child {
-    width: calc(100% / 3);
     height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+
+    @include g.overTab {
+      width: calc(100% / 3);
+    }
   }
 
   .fac-child-img {

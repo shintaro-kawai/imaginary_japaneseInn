@@ -34,23 +34,41 @@
   .top-list {
     display: grid;
     width: 100%;
-    height: 500px;
     margin: 60px auto 10px;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    gap: 20px;
+
     justify-items: center;
     align-items: center;
+    // border: 1px solid g.cl(inspect-line);//
+
+    height: 550px; //
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, calc(50px));
+    gap: 10px;
+
+    @include g.overTab {
+      height: 500px;
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      gap: 20px;
+    }
   }
 
   .top-item {
-    font-size: 60px;
     color: g.cl(black);
     text-align: center;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.4em;
+    font-size: 48px;
+
+    @include g.overTab {
+      font-size: 60px;
+    }
 
     &.-plus {
-      font-size: 90px;
+      font-size: 48px;
+
+      @include g.overTab {
+        font-size: 90px;
+      }
     }
   }
 

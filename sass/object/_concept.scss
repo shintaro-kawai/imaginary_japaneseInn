@@ -26,15 +26,23 @@
   .yakushima-wrap {
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
     width: 100%;
     margin-top: 100px;
+    flex-flow: column wrap;
+
+    @include g.overTab {
+      flex-flow: row wrap;
+    }
   }
 
   .yakushima-item {
     padding: 30px;
-    width: calc(100% / 3);
     display: inline-block;
+    width: 100%;
+
+    @include g.overTab {
+      width: calc(100% / 3);
+    }
 
     .title-jpn {
       display: inline-block;
