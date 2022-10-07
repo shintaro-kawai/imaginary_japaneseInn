@@ -23,18 +23,34 @@
     text-align: center;
   }
 
+  .recruit-br {
+    display: inline;
+
+    @include g.overTab {
+      display: none;
+    }
+  }
+
   .recruit-wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column-reverse wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @include g.overTab {
+      flex-flow: row wrap;
+    }
   }
 
   .recruit-detail {
-    width: 60%;
+    width: 90%;
     height: auto;
     padding: 20px 30px 10px 20px;
+
+    @include g.overTab {
+      width: 60%;
+    }
   }
 
   .requirement {
@@ -52,8 +68,12 @@
   }
 
   .another {
-    width: 40%;
+    width: 90%;
     height: auto;
+
+    @include g.overTab {
+      width: 40%;
+    }
 
     .recruit-img {
       width: 100%;

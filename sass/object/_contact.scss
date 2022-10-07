@@ -17,7 +17,13 @@
 
   .form-item {
     overflow: hidden;
-    margin-bottom: 20px;
+    margin: 5px auto 20px;
+    border: 1px solid g.cl(inspect-line);
+    padding-left: 40px;
+
+    @include g.overTab {
+      padding-left: 20px;
+    }
   }
 
   .label {

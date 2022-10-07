@@ -92,8 +92,13 @@
   }
 
   .title-side {
-    width: 20%;
-    height: 100%;
+    width: 70%;
+    text-align: center;
+
+    @include g.overTab {
+      width: 20%;
+      height: 100%;
+    }
   }
 
   .title-wrapper {
@@ -103,13 +108,17 @@
   }
 
   .eng-title {
-    display: inline-block;
     padding: 2px 5px;
+    // border: 1px solid g.cl(bluegreen);
+    display: inline-block;
+
+    @include g.overTab {}
   }
 
   .jpn-title {
     display: inline-block;
     padding: 2px 5px;
+    // border: 1px solid g.cl(inspect-line);
   }
 
   .info-side {
@@ -119,10 +128,16 @@
 
   .info-smallwrap {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: left;
-    align-items: flex-start;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 7px;
+
+    @include g.overTab {
+      flex-flow: row nowrap;
+      justify-content: left;
+      align-items: flex-start;
+    }
   }
 
   .info-box {

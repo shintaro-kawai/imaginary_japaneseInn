@@ -328,14 +328,17 @@ li {
   color: #000;
   width: 100%;
   display: block;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 24px;
+  padding-left: 20px;
 }
 @media print, screen and (min-width: 768px) {
   .header .nav-items__item a {
     margin-bottom: 0;
+    text-align: center;
+    padding-left: 0;
   }
 }
 .header .nav-items__item:last-child a {
@@ -394,9 +397,15 @@ li {
 }
 
 .access {
-  width: 80%;
-  height: 600px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+}
+@media print, screen and (min-width: 768px) {
+  .access {
+    width: 80%;
+    height: 600px;
+  }
 }
 .access .inner {
   width: 100%;
@@ -404,16 +413,30 @@ li {
 }
 .access .access-wrapper {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media print, screen and (min-width: 768px) {
+  .access .access-wrapper {
+    flex-flow: row nowrap;
+    height: 400px;
+  }
 }
 .access .google-map {
-  width: 65%;
-  height: 400px;
+  width: 90%;
+  height: 350px;
   position: relative;
+}
+@media print, screen and (min-width: 768px) {
+  .access .google-map {
+    width: 65%;
+    height: 400px;
+  }
 }
 .access .google-map iframe {
   position: absolute;
@@ -424,12 +447,18 @@ li {
 }
 .access .route {
   display: block;
-  width: 35%;
+  width: 90%;
   height: 100%;
-  margin: 0 auto;
-  padding-top: 10px;
+  margin: 0 auto 10px;
+  padding-top: 20px;
   padding-left: 20px;
+  padding-bottom: 40px;
   background-color: rgba(255, 229, 204, 0.6);
+}
+@media print, screen and (min-width: 768px) {
+  .access .route {
+    width: 35%;
+  }
 }
 .access .route > span {
   display: inline-block;
@@ -581,7 +610,14 @@ li {
 }
 .contact .form-item {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin: 5px auto 20px;
+  border: 1px solid #e0505d;
+  padding-left: 40px;
+}
+@media print, screen and (min-width: 768px) {
+  .contact .form-item {
+    padding-left: 20px;
+  }
 }
 .contact .label {
   float: left;
@@ -719,8 +755,14 @@ li {
   }
 }
 .facility .title-side {
-  width: 20%;
-  height: 100%;
+  width: 70%;
+  text-align: center;
+}
+@media print, screen and (min-width: 768px) {
+  .facility .title-side {
+    width: 20%;
+    height: 100%;
+  }
 }
 .facility .title-wrapper {
   width: 100%;
@@ -728,8 +770,8 @@ li {
   flex-flow: column nowrap;
 }
 .facility .eng-title {
-  display: inline-block;
   padding: 2px 5px;
+  display: inline-block;
 }
 .facility .jpn-title {
   display: inline-block;
@@ -741,10 +783,17 @@ li {
 }
 .facility .info-smallwrap {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: left;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 7px;
+}
+@media print, screen and (min-width: 768px) {
+  .facility .info-smallwrap {
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: flex-start;
+  }
 }
 .facility .info-box {
   display: block;
@@ -928,17 +977,35 @@ li {
   width: 100%;
   text-align: center;
 }
+.recruit .recruit-br {
+  display: inline;
+}
+@media print, screen and (min-width: 768px) {
+  .recruit .recruit-br {
+    display: none;
+  }
+}
 .recruit .recruit-wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column-reverse wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+@media print, screen and (min-width: 768px) {
+  .recruit .recruit-wrapper {
+    flex-flow: row wrap;
+  }
+}
 .recruit .recruit-detail {
-  width: 60%;
+  width: 90%;
   height: auto;
   padding: 20px 30px 10px 20px;
+}
+@media print, screen and (min-width: 768px) {
+  .recruit .recruit-detail {
+    width: 60%;
+  }
 }
 .recruit .requirement {
   display: inline-block;
@@ -952,8 +1019,13 @@ li {
   list-style-type: square !important;
 }
 .recruit .another {
-  width: 40%;
+  width: 90%;
   height: auto;
+}
+@media print, screen and (min-width: 768px) {
+  .recruit .another {
+    width: 40%;
+  }
 }
 .recruit .another .recruit-img {
   width: 100%;
@@ -996,15 +1068,25 @@ li {
 .room .rooms {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   background-color: transparent;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+@media print, screen and (min-width: 768px) {
+  .room .rooms {
+    flex-flow: row nowrap;
+  }
 }
 .room .room-img {
-  width: calc(50% - 10px);
+  width: 100%;
   height: auto;
   position: relative;
   display: inline-block;
+}
+@media print, screen and (min-width: 768px) {
+  .room .room-img {
+    width: calc(50% - 10px);
+  }
 }
 .room .room-img::after {
   display: block;
@@ -1039,16 +1121,31 @@ li {
 }
 .room .pay-wrapper {
   display: flex;
-  flex-flow: row wrap;
-  max-height: 700px;
+  flex-flow: column wrap;
+}
+@media print, screen and (min-width: 768px) {
+  .room .pay-wrapper {
+    flex-flow: row wrap;
+    max-height: 700px;
+  }
 }
 .room .pay-left {
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
+@media print, screen and (min-width: 768px) {
+  .room .pay-left {
+    width: 50%;
+  }
+}
 .room .pay-right {
-  width: 50%;
+  width: 100%;
   height: 100%;
+}
+@media print, screen and (min-width: 768px) {
+  .room .pay-right {
+    width: 50%;
+  }
 }
 .room .price {
   width: 100%;
@@ -1109,6 +1206,14 @@ li {
   background-color: rgba(245, 245, 245, 0.6);
   margin: 0 auto;
   padding: 10px 5px 17px;
+}
+.room .price-info-br {
+  display: inline;
+}
+@media print, screen and (min-width: 768px) {
+  .room .price-info-br {
+    display: none;
+  }
 }
 
 .top {
